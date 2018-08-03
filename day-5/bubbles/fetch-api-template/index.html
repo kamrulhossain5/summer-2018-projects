@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel='stylesheet' href='style.css'>
+        <title>Recipe Generator</title>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                background-color: #AEAEAE;
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1 0 auto;
+            }
+      
+            #wrapper {
+                color: blue;
+                margin: 10%;
+                border: 2px;
+                border-color: black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                
+                
+            }
+            
+            #img {
+                width: 100px;
+                height: 200px;
+                
+            }
+            
+            .images {
+                margin: 10%;
+                height: 250px;
+                width: 250px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <nav>
+            <div class="nav-wrapper deep-orange darken-1">
+              <a href="#!" class="brand-logo center"><i class="material-icons center ">fastfood</i>Recipe Generator</a>
+            </div>
+        </nav>
+        <main class = "container">
+            <input class="z-depth-4" id="input" type="text" placeholder="What would you like to make?" />
+            <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action" id='submit'>Submit
+            <i class="material-icons right">send</i>
+            </button>
+        </main>   
+        
+        <div class="footer-copyright deep-orange darken-1">
+          <div class="container white-text">
+            &copy; 2018 Mapographics
+            <a class="white-text right" href="#!">Terms & Conditions</a>
+          </div>
+        </div>
+            
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>A-Frame DOM Manipulation</title>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    
+</head>
+
+<body>
+
+    <!--beginning of the 3D scene!-->
+    <a-scene id="scene">
+
+        <a-assets id="assets">
+            <img id="sky" src="sky.jpeg">
+            <a-asset-item id="house-obj" src="generic-houses-1-obj/generic-houses-1.obj"></a-asset-item>
+            <a-asset-item id="house-mtl" src="generic-houses-1-obj/generic-houses-1.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-sky src="#sky"></a-sky>
+
+        <!--the cursor allows us to click on things! It has to move with the camera, which has to be inside of an a-entity tag.-->
+        <a-entity>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-entity>
+        <!--this plane is the ground-->
+        <a-plane height="1000" width="1000" color="green" rotation="-90 0 0"></a-plane>
+        <a-box id = "box" color ="red" width = ".3" height = ".3" depth = ".4" position = "0 1.5 -5"></a-box>
+        <!--The Up House-->
+        <a-entity id="houseBalloons">
+            <a-entity obj-model="obj: #house-obj; mtl: #house-mtl" position="6 0 -10"></a-entity>
+        </a-entity>
+
+        
+        <!--sets the lighting for the scene-->
+        <a-light type="ambient" color="#445451"></a-light>
+        <a-light type="point" intensity="1" position="2 4 4"></a-light>
+
+    </a-scene>
+    <script src="script.js"></script>
+</body>
+
+</html>

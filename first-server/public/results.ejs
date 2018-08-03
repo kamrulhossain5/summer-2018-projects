@@ -1,0 +1,20 @@
+<head>
+    <title>First Server</title>
+    <style>
+        .book {
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here are the books you searched up: </h1>
+    <% data.forEach( book => { %>
+        <div class="book">
+            <h3><%= book.title %> </h3>
+            <img src = "<%= book.thumbnail %>" />
+            <p><%= book.description %> </p>
+        </div>
+        
+    <% }) %>
+</body>

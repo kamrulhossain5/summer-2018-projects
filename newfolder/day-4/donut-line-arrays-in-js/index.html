@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Let's make a page!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+  </head>
+  <body>
+    <div class="area" id="header">
+      <h1>Donut Line App</h1>
+    </div>
+    <div class="area" id="sidebar">
+      <h1>Already Eaten</h1>
+      <ol id="eaten">
+          
+      </ol>
+    </div>
+    <div class="area" id="main">
+      <h1>Main</h1>
+      <div id="contentWrapper">
+        <label>Name: </label>
+        <input type="text" id="name_input" />
+        <button id="push_btn">Add to End of Line</button>
+        <button id="pop_btn">Take Off End of Line</button>
+        <button id="unshift_btn">Cut in Line</button>
+        <button id="eat_donut">Have Person Eat Donut</button>
+        <div id="donut_line" class="line">
+          <ol id = "donut_line_ol">
+            
+          </ol> 
+        </div>
+      </div>
+    </div>
+    <div class="area" id="footer">
+      <h1>Footer</h1>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

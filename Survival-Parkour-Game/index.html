@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Final Project Upperline</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+    <!--<script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script>-->
+    <!--<script type="text/javascript" src="projectile.js"></script>-->
+
+</head>
+
+<body>
+    <a-scene>
+        <!--<a-plane static-body position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>-->
+        <a-assets>
+            <a-asset-item src="srcs/tree02.mtl" id="tree02-mtl"></a-asset-item>
+            <a-asset-item src="srcs/tree02.obj" id="tree02-obj"></a-asset-item>
+            <a-asset-item src="srcs/boat.mtl" id="boat-mtl"></a-asset-item>
+            <a-asset-item src="srcs/boat.obj" id="boat-obj"></a-asset-item>
+            <!--<a-asset-item src="srcs/acropolis.mtl" id="acropolis.mtl"></a-asset-item>-->
+            <a-asset-item src="srcs/Lighthouse_singly.gltf" id="lighthouse"></a-asset-item>
+            <a-asset-item src="srcs/Lighthouse_singly.mtl" id="lighthouse-mtl"></a-asset-item>
+            <a-asset-item src="srcs/Lighthouse_singly.obj" id="lighthouse-obj"></a-asset-item>
+            <a-asset-item src="srcs/stone_texture.jpeg" id="stonetexture"></a-asset-item>
+            <a-asset-item src="srcs/Stone.gltf" id="stoneThang"></a-asset-item>
+            <a-asset-item src="srcs/Lighthouse_texture.png"></a-asset-item>
+            <img id="lthouse-png" src="srcs/Lighthouse_texture.png" />
+
+
+
+        </a-assets>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="5 4 -9" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="4 4 -4" scale="1 5 6"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="4 4 -7" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="8 4 -4.5" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="6 4 -5" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-38 4 -5" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-36 4 7" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-36 4 15" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-32 4 7" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-34 4 5" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-38 4 9" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-40 4 3" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-42 4 15" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-44 4 1" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-46 4 17" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-48 4 19" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-50 4 17" scale="1 5 4"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-50 4 -8" scale="1 5 4" rotation="0 67 0"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-48 4 -8" scale="1 5 4" rotation="0 67 0"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-47 4 -8" scale="1 5 4" rotation="0 67 0">s</a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-44 4 -8" scale="1 5 4" rotation="0 67 0"></a-obj-model>
+        <a-obj-model static-body src="#tree02-obj" mtl="#tree02-mtl" position="-41 4 -8" scale="1 5 4" rotation="0 67 0"></a-obj-model>
+
+        <a-obj-model static-body src="#boat-obj" mtl="#boat-mtl" position="-55 3 4"></a-obj-model>
+        <!--<a-entity src="#lthouse-png" obj-model="obj: #lighthouse-obj; mtl: #lighthouse-mtl" scale="5 5 5" position="-3 -3 4"></a-entity>-->
+        <a-entity id="target">
+            <a-entity class="enemy" static-body gblock="https://poly.google.com/view/4MQZWmRa_b_" scale="8 8 8" position="-2 77 9"></a-entity>
+        </a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/0t2ZYRBsqX-" scale="5 5 5" position="-3 -3 4"></a-entity>
+
+        <!-- these are the god damn stairs -->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-53 3 10"></a-entity>
+        <!--<a-box static-body  position="-53 5 10" height="2" color="#4CC3D9"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-50 4 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-48 5 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-47 6 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-46 7 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-45 8 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-44 9 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-43 10 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-42 11 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-41 13 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-40 14 10"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-39 15 10"></a-entity>
+
+        <!--<a-box static-body src="#stonetexture" position="-50 5 10" height="2" ></a-box>-->
+
+        <!--<a-box static-body src="#stonetexture" position="-48 5 10" height="0.5" color="#4CC3D9"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-47 6 10" height="0.5" color="red"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-46 7 10" height="0.5" color="yellow"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-45 8 10" height="0.5" color="white"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-44 9 10" height="0.5" color="black"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-43 10 10" height="0.5" color="#4CC3D9"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-42 11 10" height="0.5" color="red"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-41 12 10" height="0.5" color="yellow"></a-box>-->
+        <!--<a-box static-body src="#stonetexture" position="-40 13 10" height="0.5" color="white"></a-box>-->
+        <a-box static-body src="#stonetexture" position="-39 14 10" height="0.5" color="black"></a-box>
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-38 15 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-38 15 10" height="0.5" color="#4CC3D9"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-37 16 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-37 16 10" height="0.5" color="red"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-36 17 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-36 17 10" height="0.5" color="yellow"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-35 18 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-35 18 10" height="0.5" color="white"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-33 20 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-33 20 10" height="0.5" color="#4CC3D9"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-32 21 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-32 21 10" height="0.5" color="red"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-31 22 10"></a-entity>
+        <!--<a-box static-body src="#stonetexture" position="-31 22 10" height="0.5" color="yellow"></a-box>-->
+        <a-entity static-body gblock="https://poly.google.com/view/62bVOJt7vHv" scale="0.01 0.01 0.01" position="-30 23 10"></a-entity>
+        <a-box static-body src="#stonetexture" position="-30 23 10" height="0.5" color="white"></a-box>
+        <!--start of blocks-->
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="10 5 10" position="-32 18 15"></a-entity>
+
+        <!--rock 2-->
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-39 17 20"></a-entity>
+
+        <!--rock 3-->
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-47 18 20"></a-entity>
+        <!--rock 4-->
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-55 19 15"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-46 20 10"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-45 22 0"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-44 23 -10"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-42 25 -18"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-38 29 -20"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-35 32 -24"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-27 34 -18"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-19 37 -15"></a-entity>
+
+        <a-entity static-body gblock="https://poly.google.com/view/2TUezwzcGG_" scale="15 7 20" position="-19 37 -15"></a-entity>
+
+
+
+        <!-- Island - Made in MagicaVoxel. -->
+        <a-plane position="-25 4 -4" width="300" height="300" static-body rotation="-90 0 0" scale="0.3 0.3 0.3" color="green"></a-plane>
+
+        <!-- Ocean -->
+        <a-ocean height="1000" width="1000" depth="1000" density="600" opacity="1" position="0 4 0"></a-ocean>
+
+        <!-- Sky -->
+        <a-sky color="#AADDF0"></a-sky>
+
+        <!-- Lighting -->
+        <a-light type="ambient" color="#ccc"></a-light>
+        <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
+        <a-light color="#ddf" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+        <!--Make a player/camera entity, and give it the attributes we need it to have in order control camera with mouse, movement with WASD, and jump with spacebar-->
+        <a-entity class="player" id="player" camera jump-ability universal-controls kinematic-body position="-55.98 7.14 1.98">
+            <!-- -55.98 7.14 1.98 -->
+            <!--<a-cursor></a-cursor>-->
+            <a-entity cursor raycaster="far: infinity" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
+            </a-entity>
+            <!--<a-entity class="player" id="player" camera jump-ability universal-controls kinematic-body position="-24 44 5">-->
+        </a-entity>
+    </a-scene>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>

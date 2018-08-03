@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <title>The MOTTO</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Main stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAxUuV-FwP4eYwCSnZglRMqkyIEmaXfBDo",
+            authDomain: "motto-de98d.firebaseapp.com",
+            databaseURL: "https://motto-de98d.firebaseio.com",
+            projectId: "motto-de98d",
+            storageBucket: "motto-de98d.appspot.com",
+            messagingSenderId: "782338229718"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar-fixed">
+
+        <nav class="black">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">MOTTO</a>
+                    <ul class="right hide-on-med-and-down" id="navList">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#mood">Mood Tracker</a></li>
+                        <li><a href="#about">Team</a></li>
+                        <!--<li><a href="#signin" data-target='login'>Account</a></li> -->
+                        <li id="auth-dropdown-holder">
+                            <a id="auth-dropdown-button" class='dropdown-trigger' href='#' data-target='dropdown1'>
+                                Account
+                            </a>
+                        </li>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a class="black-text" id="sign-in-button" href="#!">Sign In</a></li>
+                            <li><a class="black-text" id="sign-out-button" href="#!">Sign Out</a></li>
+                        </ul>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Home Screen -->
+
+    <div class="section" id="home">
+        <h3 id="mainText" class="center"></h3>
+        <h1 style="margin-bottom: -50px" style="color: white;" class="center">
+            <b>MOTTO</b>
+        </h1>
+        <h5 id="mainText" class="center">Music, Organize, Text, Track, & Optimize</h5>
+
+    </div>
+
+    <!-- Mood Tracker -->
+
+    <div id="mood" class="section black">
+        <h1>Mood Tracker</h1>
+        <section  class="mood" role="listbox">
+            <a class="sad" role="option">sad<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/crying-face_1f622.png"></a>
+            <a class="angry" role="option">angry<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/pensive-face_1f614.png"></a>
+            <a class="annoyed" role="option">annoyed<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/face-with-stuck-out-tongue_1f61b.png"></a>
+            <a class="neutral" role="option">neutral<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/neutral-face_1f610.png"></a>
+            <a class="happy" role="option">happy<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/smiling-face-with-open-mouth_1f603.png"></a>
+            <a class="calm" role="option">calm<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/google/3/smiling-face-with-smiling-eyes_1f60a.png"></a>
+        </section>
+
+        <section class="intensity" role="listbox">
+            <a class="i1" role="option">1</a>
+            <a class="i2" role="option">2</a>
+            <a class="i3" role="option">3</a>
+            <a class="i4" role="option">4</a>
+            <a class="i5" role="option">5</a>
+            <a class="i6" role="option">6</a>
+            <a class="i7" role="option">7</a>
+            <a class="i8" role="option">8</a>
+            <a class="i9" role="option">9</a>
+            <a class="i10" role="option">10</a>
+        </section>
+
+        <section  class="energy" role="listbox">
+            <a id = "e1" class="#" role="option">1</a>
+            <a class="#" role="option">2</a>
+            <a class="#" role="option">3</a>
+            <a class="#" role="option">4</a>
+            <a class="#" role="option">5</a>
+            <a class="#" role="option">6</a>
+            <a class="#" role="option">7</a>
+            <a class="#" role="option">8</a>
+        </section>
+
+        <section  class="intoxication" role="listbox">
+            <a class="#" role="option">0</a>
+            <a class="#" role="option">1</a>
+            <a class="#" role="option">2</a>
+            <a class="#" role="option">3</a>
+            <a class="#" role="option">4</a>
+            <a class="#" role="option">5</a>
+            <a class="#" role="option">6</a>
+            <a class="#" role="option">7</a>
+        </section>
+        <p class="info"></p>
+        
+        
+        <textarea id="mood-note" type="text" class="note" placeholder="Why are you feeling that way?"></textarea>
+        <a href="#!" id="submit_button" class="submit button">Save</a>
+        <article  class="history">
+            <ul id="history">
+                
+            </ul>
+        </article>
+
+        <div class="alert" role="alert">
+            <p>You're not done yet! Make sure to enter how you're feeling in all of the categories.</p>
+            <p><a class="button" href="#">Ok</a></p>
+        </div>
+    </div>
+    
+    <!--Quote-->
+    <div id="p1" class="quote-container">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center white-text">
+                    <blockquote cite="Plato">Music can change lives. Whether you are having a good or bad day, the power of music can change one's mood.<br /> - Jess Bowen
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Playlist-->
+    <div class="section" id="playlistStuff">
+        <h1 id="ptitle">Playlist</h1>
+        <div class="container inline-stuff" id=stuff>
+            <div class="row2 container center">
+                
+            </div>
+            <div id="playlist">
+            
+            </div>
+            <div id="chat">
+
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <!-- Team -->
+
+    <div class="section" style="background-color: #101010;" id="about">
+        <div class="container">
+            <h3 class="header text_b center">Team</h3>
+            <h6>Motto gives you the opportunity to express and document your feelings. Motto takes venting to the next level by connecting you to a personalized playlist, a journal, a chat room, and ultimately makes finding a therapist a breeze.</h6>
+            <div class="row ">
+                <div class="col s12 m12 l4">
+                    <div class="card black">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="Wedding.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator purple-text text-lighten-5">Kamrul Hossain <i class="mdi-navigation-more-vert material-icons right">more_vert</i></span>
+                            <p><a class="purple-text text-lighten-5" href="#">Chief Technology Officer (CTO)</a></p>
+                        </div>
+                        <div class="card-reveal  black">
+                            <span class="card-title purple-text text-lighten-5">OppNet Class of '21 <i class="mdi-navigation-close right"></i></span>
+                            <p>Intended Major: Computer Science</p>
+                            <p>Top 5 Artists: Drake, Kendrick Lamar, J.Cole, Nav, Travis Scott </p>
+                            <p>Instagram: kvmrul </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="card black">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="amori.JPG">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator purple-text text-lighten-5">Amori Richards <i class="mdi-navigation-more-vert material-icons right">more_vert</i></span>
+                            <p><a class="purple-text text-lighten-5" href="#">Chief Operating Officer (COO)</a></p>
+                        </div>
+                        <div class="card-reveal  black">
+                            <span class="card-title purple-text text-lighten-5">OppNet Class of '20<i class="mdi-navigation-more-vert material-icons right">more_vert</i></span>
+                            <p>Major:Computer Information Systems </p>
+                            <p>Top 5 Artists:  Smino, Brockhampton, Masego, Earl Sweatshirt, Nujbes </p>
+                            <p>Instagram: nu.sabi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="card black">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="lindsay.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator purple-text text-lighten-5">Lindsay Espaillat <i class="mdi-navigation-more-vert material-icons right">more_vert</i></span>
+                            <p><a class="purple-text text-lighten-5" href="#">Chief Executive Officer (CEO)</a></p>
+                        </div>
+                        <div class="card-reveal  black">
+                            <span class="card-title purple-text text-lighten-5">OppNet Class of '20<i class="mdi-navigation-close right"></i></span>
+                            <p>Major: Globalization</p>
+                            <p>Top 5 Artists: The Internet, Kendrick Lamar, Calle 13, Kail Uchis, Ariana Grande</p>
+                            <p>Instagram: wise.latina </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="section page-footer black">
+        <div class="container center-align">
+            &#169; Motto Inc. 2018
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>

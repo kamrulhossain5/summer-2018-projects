@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+        <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!--Build our background and our floor-->
+            <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+            <a-sky color="#ECECEC"></a-sky>
+    
+        
+            
+            <a-entity gblock="https://poly.google.com/view/fOFK2hYBrbA" scale="0.01 0.01 0.01" position="20 0.5 -3" ></a-entity>
+            <a-entity gblock="https://poly.google.com/view/fCiJW5Qdgbf" scale="10 10 5" position="0 6 -3" ></a-entity>
+            <a-entity gblock="https://poly.google.com/view/eKh6REcsKnc" scale="0.07 0.07 0.07" position="30 -4 -15" ></a-entity>
+            <a-entity gblock="https://poly.google.com/view/85FpUr2fHkH" scale="1 1 1" position="15 -6 -3" ></a-entity>
+            <!--Make a player/camera entity, and give it the attributes we need it to have in order control camera with mouse, movement with WASD, and jump with spacebar-->
+            <a-entity class="player" id="player" 
+                camera
+                jump-ability
+                universal-controls
+                kinematic-body
+                position="1 4 2">
+            </a-entity>
+        </a-scene>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>

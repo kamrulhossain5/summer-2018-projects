@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href='style.css'>
+
+  <!-- Compiled and minified JavaScript -->
+  <title>Mapographic</title>
+  
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper blue-grey">
+      <a href="#" class="brand-logo center">Mapographic</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+  <main class="container">
+    <div class="input-field col s12">
+      <blockquote>
+          What is your race?
+      </blockquote>
+      <select id='race'>
+            <option value=""disabled selected>Choose your option</option>
+            <option value="percent_white_non_hispanic">White</option>
+            <option value="percent_black_non_hispanic">Black</option>
+            <option value="percent_asian_non_hispanic">Asian</option>
+            <option value="percent_american_indian">Native American</option>
+            <option value="percent_pacific_islander">Pacific Islander</option>
+            <option value="percent_hispanic_latino">Hispanic Latino</option>
+            <option value="percent_other_ethnicity">Other</option>
+            <option value="percent_ethnicity_unknown">Ethnicity Unknown</option>
+          </select>
+    </div>
+    <a href="index2.html">
+      <button class="btn waves-effect waves-light blue-grey" type="submit" name="action" id='submit'>Submit
+        <i class="material-icons right">send</i>
+        </button>
+        </a>
+  </main>
+
+
+
+  <footer class="page-footer blue-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text text-lighten-4">Discover where to live in NYC based on your demographic</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Team</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Kamrul Hossain</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Jeffron Addy</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Louis Jean</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2018 Mapographics
+        <a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+
+</html>
+
+<!--https://data.cityofnewyork.us/City-Government/Demographic-Statistics-By-Zip-Code/kku6-nxdu/data-->

@@ -1,0 +1,39 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-asset>
+        <img id = "background" src = "lab.jpg">
+        </a-asset>
+        <a-text visible = "false" id = "hello" value = "Hi, my name is Mr.Robot" color = "red" position = "-1 2.5 -3"></a-text>
+        
+        <a-box id = "face" color = "grey" position = "0 1 -6" width = "2" height = "2" depth = "2"></a-box>
+        <a-box id = "antenna1" color = "#A9A9A9" position = "-.5 2.2 -6" width = ".3" height = ".4" depth = ".3" rotation = " 0 0 20"></a-box>
+        <a-box id = "antenna2" color = "#A9A9A9" position = ".5 2.2 -6" width = ".3" height = ".4" depth = ".3" rotation = " 0 0 -20"></a-box>
+        
+        <a-entity id="changeEyes">
+        <a-sphere id = "leftEye" color = "dodgerblue" position = "-.4 1.4 -5.24" radius = ".3"></a-sphere>
+        <a-sphere id = "leftPupil" color = "black" position = "-.4 1.4 -5" radius = ".1"></a-sphere>
+        <a-sphere id = "rightEye" color = "dodgerblue" position = ".4 1.4 -5.24" radius = ".3"></a-sphere>
+        <a-sphere id = "rightPupil" color = "black" position = ".4 1.4 -5" radius = ".1"></a-sphere>
+        </a-entity>
+        
+        <a-sphere id = "evil" color = "red" position = "0 2.3 -5.24" radius = ".3"></a-sphere>
+        <a-sphere id = "grow" color = "green" position = "-1.35 1.4 -5.24" radius = ".3"></a-sphere>
+        <a-sphere id = "sky" color = "yellow" position = "1.35 1.4 -5.24" radius = ".3"></a-sphere>
+        <a-box id = "mouth" color ="white" width = "1.5" height = ".3" depth = ".4" position = "0 .6 -5"></a-box>
+      
+        
+    <a-sky src = "#background"></a-sky>
+    
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+    
+    </a-scene>
+    <script src = "script.js"></script>
+  </body>
+</html>

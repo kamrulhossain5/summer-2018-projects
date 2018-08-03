@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("https://i.kinja-img.com/gawker-media/image/upload/t_original/cjulgymt3g2mupc67wb5.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
+  .nav-wrapper {
+    background-color: #64b5f6 blue lighten-2;
+  }
+  
+  blockquote {
+    font-size: 20px !important;
+    color: white !important;
+    font-weight: bold;
+    border-left: 10px solid #607d8b;
+  }
+  
+  input, select,option {
+    font-size: 20px;
+    color: white;
+  }
+  
